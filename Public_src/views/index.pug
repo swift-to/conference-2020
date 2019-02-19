@@ -2,30 +2,171 @@ extends ./layout.pug
 
 block content
   section.site-hero.overlay
-    div.container
-      div.row.align-items-center.site-hero-inner.justify-content-center
-        div.col-md-8.text-center
-          div.mb-1.mb-md-5
-            h1.mb-2
-              img.swift-logo(src="./images/swift-icon-white.png")
-              span=title
-            div.info
-              span.mb-5.conference-description=description
-              span.conference-date=date
+    div.background-color-overlay
+      div.container
+        div.row.align-items-center.site-hero-inner.justify-content-center
+          div.col-md-8.text-center
+            div.mb-1.mb-md-5
+              h1.mb-3
+                img.swift-logo(src="./images/swift-icon-white.png")
+                span=title
+              div.header-info
+                span.mb-4.conference-description=description
+                span.mb-3.conference-date=date
+                a.mb-4.conference-venue(href=venueUrl, target="_blank") @ #{venueName}
 
-  section.mb-5
+  section.mb-5#summary
     div.container
       h3.text.mt-5.mb-5 What to Expect
       div.row.mb-3
         each expectation in expectations
           div.col-lg-4.mb-2
-            h3.mb-3=expectation.title
+            h4.mb-3=expectation.title
             p=expectation.description
+  hr
 
-  section.mb-5
+  section.mb-5#speakers
     div.container
-      h3.text.mt-5.mb-4 Now Calling for Speakers
+      h3.text.mt-5.mb-4 Speakers
+      div.row.profiles-section
+        each speaker in speakers
+            div.col-md-3.mb-3
+              img.mb-3(src="./images/" + speaker.slug + ".jpg")
+              h5=speaker.name
+              - if (typeof(speaker.twitter) !== 'undefined'){
+                a(target="_blank", href="https://twitter.com/" + speaker.twitter)
+                  span.fa.fa-twitter
+                  | &nbsp;
+                  span=speaker.twitter
+              - }
+
+  hr
+
+  section.mb-5#tickets
+    div.container
+      h3.text.mt-5.mb-4 Tickets
+      h5 Thank you for your support. We are sold out!
+
+  hr
+
+  section.mb-5#sign-up
+    div.container
+      h3.conference-sign-up.mt-5.mb-2 Sign-up for the latest updates
+      include mailchimpForm.pug
+
+  hr
+
+  section.mb-5#talk-proposals
+    div.container
+      h3.text.mt-5.mb-4 Submit your talk proposals
       div.row.mb-3
           div.col-lg-12.mb-2
             p We are now seeking speakers for the conference. All talks will be recorded and distributed online.
-            p Send us your talk proposals here
+            p Talks can be 10, 15 or 30 minutes in length. Depending on the proposals received we will organize the schedule accordingly.
+              | &nbsp; Speakers will be announced over time to allow for later submissions and help us to ensure a packed schedule of great content.
+              | &nbsp;Talk proposals will be accepted until June 28th and all speakers will be notified by July 13th
+            p 
+              a(href=rfpUrl, target="_blank") Send us your talk proposals here
+
+  hr
+
+  section.m5-5#location
+    .container
+      h3.text.mt-5.mb-5 Location
+      div.row
+        div.col-md-3.mb-2.map-container
+          a(target="_blank", href="https://goo.gl/maps/bh8mqeiRb6KhA2H87")
+            img.map(src="/images/map.jpg")
+        div.col-md-9
+          p Swift TO will be held at TELUS Harbour, in the heart of downtown near Union Station
+          p We will be in
+            strong &nbsp;Flex Space 003-031
+          p Go in through the main doors on Bremner, take the elevator to the 3rd floor and walk down the hall left of reception
+
+  hr
+
+  section.mb-5#schedule
+    div.container
+      h3.text.mt-5.mb-4 Schedule
+      a(href="/images/schedule.png")
+        strong Download the detailed schedule here
+      table.schedule
+        tr.headings
+          th Time
+          th Event
+        tr
+          td.time 9:00 - 9:45
+          td Check-in &amp; Breakfast
+        tr
+          td.time 10:00 - 12:00
+          td Morning Talks
+        tr
+          td.time 12:00 - 1:00
+          td Lunch &amp; Networking
+        tr
+          td.time 1:00 - 5:15
+          td Afternoon Talks
+        tr
+          td.time 5:15 - 5:30
+          td Closing Remarks
+        tr
+          td.time 5:30 - 7:30
+          td Post-conference social
+
+  hr
+
+  section.mb-5#sponsors
+    div.container
+      h4.text.mt-5.mb-5 Silver Sponsors
+      div.col-lg-12.mb-5.silver
+        a(href="https://www.telus.com", target="blank")
+          img.sponsor(src="./images/Logo_TELUS.svg")
+        a(href="https://www.scotiabank.com", target="blank")
+          img.sponsor(src="./images/logo-scotia.svg")
+      h4.text.mt-5.mb-5 Bronze Sponsors
+      div.col-lg-12.mb-2.bronze
+        a(href="https://www.oanda.com", target="blank")
+          img.sponsor(src="./images/Logo_OANDA.jpg")
+        a(href="https://www.touchbistro.com", target="blank")
+          img.sponsor(src="./images/logo-touch-bistro.png")
+        a(href="https://www.bitrise.io", target="blank")
+          img.sponsor(src="./images/logo-bitrise.svg")
+        a(href="https://www.marketcircle.com", target="blank")
+          img.sponsor(src="./images/logo-marketcircle.svg")
+
+  hr
+
+  section.mb-5#organizers
+    div.container
+      h3.text.mt-5.mb-4 Organizers
+      div.col-lg-12.mb-3.row
+        p Swift TO is brought to you by the organizers of&nbsp;
+          a(href="https://www.meetup.com/NSCoderTO/") NSCoderTO
+          |, a macOS and iOS user group based in Toronto
+      div.row.profiles-section
+        div.col-md-3.mb-2
+          img.mb-3(src="./images/organizer-kyle.jpg")
+          h5 Kyle Newsome
+          a(target='_blank', href='https://twitter.com/kylnew')
+            span.fa.fa-twitter
+            | &nbsp;
+            span kylnew
+        div.col-md-3.mb-2
+          img.mb-3(src="./images/organizer-brendan.jpg")
+          h5 Brendan Miller
+          a(target='_blank', href='https://twitter.com/brendancmiller')
+            span.fa.fa-twitter
+            | &nbsp;
+            span brendancmiller
+        div.col-md-3.mb-2
+          img.mb-3(src="./images/organizer-bill.jpg")
+          h5 Bill Parousis
+          a(target='_blank', href='https://twitter.com/bparousis')
+            span.fa.fa-twitter
+            | &nbsp;
+            span bparousis
+
+  hr
+  
+  include includes/code-of-conduct.pug
+  
