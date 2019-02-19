@@ -1,0 +1,82 @@
+- var title = "Swift TO";
+- var description = "A conference celebrating Swift in Downtown Toronto";
+- var date = "Summer 2019"
+
+- var keywords = ["conference", "swift", "ios", "macos", "watchos", "linux", "server-side", "apple"].join(",")
+- var expectation1 = {title: "Great Talks", description: "A day filled with talks about all things Swift programming. Beyond just iOS development, this conference is about celebrating the language and its many uses."};
+- var expectation2 = {title: "Networking", description: "Meet other passionate Swift & iOS Developers in your community. An after-conference event will be organized at a nearby restaurant."};
+- var expectation3 = {title: "Knowledge you can share", description: "All content at Swift TO will be recorded and distributed online so anything you learn can easily be shared with your broader team after the event."};
+- var expectations = [expectation1, expectation2, expectation3];
+
+- var twitter = "nscoderto"
+- var email = "hello@swiftconf.to"
+- var companyName = "NSCoderTO Inc."
+
+doctype html
+html(lang="en")
+  head
+    title=title
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    meta(name="description", content=description)
+    meta(name="keywords", content=keywords)
+    link(href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Raleway", rel="stylesheet")
+    link(rel="stylesheet", href="css/bootstrap.css")
+    link(rel="stylesheet", href="css/animate.css")
+    link(rel="stylesheet", href="fonts/ionicons/css/ionicons.min.css")
+    link(rel="stylesheet", href="fonts/fontawesome/css/font-awesome.min.css")
+    // Twitter card
+    meta(name="twitter:card", content="summary")
+    meta(name="twitter:site", content="@" + twitter)
+    meta(name="twitter:title", content=title)
+    meta(name="twitter:description", content=description)
+    // Theme Style
+    link(rel="stylesheet", href="css/style.css")
+
+  body
+    header(role="banner")
+      nav#nav-app.navbar.navbar-expand-md.navbar-dark.bg-light
+        .container
+          a.navbar-brand(href='index.html')=title
+          a.navbar-brand.small(href='index.html')=title
+          button.navbar-toggler(type='button', v-on:click="toggle()")
+            span.navbar-toggler-icon
+          div(v-bind:class="{ collapse: !isExpanded }").navbar-collapse.navbar-light
+            ul.navbar-nav.ml-auto.pl-lg-5.pl-0
+              li.nav-item
+                a.nav-link(href='/') Tickets
+
+    div#app
+      block content
+
+    footer.site-footer
+      .container
+        .row.mb-5
+          .col-md-4
+            h3.mb-4 About
+            p.mb-4
+              | #{description}
+            p.mb-4
+              | This template was derived from 
+              br
+              a(target='_blank', href='https://colorlib.com/wp/template/listed/')
+                strong Listed
+              | ; made with 
+              i.fa.fa-heart-o(aria-hidden='true')
+              |  by 
+              a(target='_blank', href='https://colorlib.com') Colorlib
+          .col-md-4
+            h3.mb-4 Links
+            ul.list-unstyled
+              li
+                a(href='/') Tickets
+          .col-md-4
+            h3.mb-4 Contact
+            p
+              a.p-2(target='_blank', href='https://twitter.com/' + twitter)
+                span.fa.fa-twitter
+            p
+              a.p-2(target='_blank', href='mailto:' + email)
+                span=email
+            p
+              span.p-2=companyName

@@ -1,0 +1,31 @@
+extends ./layout.pug
+
+block content
+  section.site-hero.overlay
+    div.container
+      div.row.align-items-center.site-hero-inner.justify-content-center
+        div.col-md-8.text-center
+          div.mb-1.mb-md-5
+            h1.mb-2
+              img.swift-logo(src="./images/swift-icon-white.png")
+              span=title
+            div.info
+              span.mb-5.conference-description=description
+              span.conference-date=date
+
+  section.mb-5
+    div.container
+      h3.text.mt-5.mb-5 What to Expect
+      div.row.mb-3
+        each expectation in expectations
+          div.col-lg-4.mb-2
+            h3.mb-3=expectation.title
+            p=expectation.description
+
+  section.mb-5
+    div.container
+      h3.text.mt-5.mb-4 Now Calling for Speakers
+      div.row.mb-3
+          div.col-lg-12.mb-2
+            p We are now seeking speakers for the conference. All talks will be recorded and distributed online.
+            p Send us your talk proposals here
