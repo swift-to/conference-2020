@@ -133,12 +133,12 @@ header {
 //
   
 .site-hero {
-	background-image: url(../images/toronto-stock-image.jpg);
+	background-image: url(../images/cover-image.jpg);
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
 	> .background-color-overlay {
-		background-color: rgba(0, 0, 0, 0.5);
+		background-color: rgba(0, 0, 0, 0.75);
 	}
 	.container {
 		position: relative;

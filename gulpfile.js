@@ -70,7 +70,9 @@ gulp.task('bs', () => {
 	});
 });
 
-gulp.task('default', ['bs', 'build'], () => {
+gulp.task('build', gulp.series('html', 'js', 'styles', 'copyFonts', 'copyImages', 'copyJSLibs'));
+
+gulp.task('default', gulp.series('build', 'bs'), () => {
 	gulp.watch(sourceRoot + 'views/**.pug',['html']);
 	gulp.watch(sourceRoot + 'js/**/*.js',['js']);
 	gulp.watch(sourceRoot + 'scss/**/*.scss',['styles']);
@@ -79,4 +81,3 @@ gulp.task('default', ['bs', 'build'], () => {
 	gulp.watch(publicRoot + '*.html',reload);
 });
 
-gulp.task('build', ['html', 'js', 'styles', 'copyFonts', 'copyImages', 'copyJSLibs']);
