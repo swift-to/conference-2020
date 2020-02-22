@@ -1,22 +1,27 @@
 extends ./layout.pug
 
 block content
-  section.site-hero.small.overlay
+  section.site-hero.overlay
     div.background-color-overlay
       div.container
         div.row.align-items-center.site-hero-inner.justify-content-center
           div.col-md-8.text-center
             div.mb-1.mb-md-5
-              h1.mb-3
-                img.swift-logo(src="./images/swift-icon-white.png")
-                span=title
+              h1
+                img.swift-logo(src="./images/swift-to-logo.png")
+                span.title=title
               div.header-info
                 span.mb-4.conference-description=description
                 span.mb-3.conference-date=date
+                a.mb-4.conference-venue(href=venueUrl, target="_blank") @ #{venueName}
 
   section.mb-5#speakers
     div.container
       h3.text.mt-5.mb-5 Speakers
+      - if (speakers.length == 0)
+        p Speakers are currently being determined. You can save on the ticket price by supporting us during our early planning phases.
+        p Want to speak at our conference?&nbsp;
+          a(href=rfpUrl, target="_blank") Submit your talk proposals here
       each speaker in speakers
         div.row.profiles-section.mt-5.mb-5
           div.col-md-3.mb-5

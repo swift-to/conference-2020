@@ -1,18 +1,19 @@
 extends ./layout.pug
 
 block content
-  section.site-hero.small.overlay
+  section.site-hero.overlay
     div.background-color-overlay
       div.container
         div.row.align-items-center.site-hero-inner.justify-content-center
           div.col-md-8.text-center
             div.mb-1.mb-md-5
-              h1.mb-3
-                img.swift-logo(src="./images/swift-icon-white.png")
-                span=title
+              h1
+                img.swift-logo(src="./images/swift-to-logo.png")
+                span.title=title
               div.header-info
                 span.mb-4.conference-description=description
                 span.mb-3.conference-date=date
+                a.mb-4.conference-venue(href=venueUrl, target="_blank") @ #{venueName}
 
   section.mb-5#policy
     div.container
@@ -36,11 +37,11 @@ block content
       h3.text.mt-5.mb-4 Diversity Support Scholarships
       div.row
           div.col-lg-12.mb-2
-            p To make sure that Swift TO is an inclusive space for all individuals we have a Diversity Support Scholarship Program this year.&nbsp;
-              | When you make your purchase, you will have the option to contribute to and help us make more scholarship tickets available.&nbsp;
+            p To make sure that Swift TO is an inclusive space for all individuals we have a Diversity Support Scholarship Program.&nbsp;
+              | We reserve a portion of all ticket and sponsorship sales to help make scholarship tickets available.&nbsp;
               | On 
-              strong July 29th 2019
-              | , 2 weeks before the event, we will raffle the tickets and notify all scholarship applicants.
+              strong July 15th 2019
+              | , 1 month before the event, we will raffle the tickets and notify all scholarship applicants.
 
             p If you would like to apply, email us at 
               a(target='_blank', href='mailto:' + email)
@@ -53,11 +54,10 @@ block content
           li You are one or more of the following:
             ul
               li A full or part-time student
-              li A member or alumni of a STEM organization such as but not limited to: Free Code Camp, Ladies Learning Code, Dames Making Games
+              li A member or alumni of a STEM organization such as but not limited to: Free Code Camp, Ladies Learning Code, Dames Making Games, Bridge School, NPower Canada
               li A woman, minority, single parent, LGBTQIA, or disabled individual participating in your local iOS / Mac meetup groups, or employed working on an iOS product.
           li You have a true financial need for this scholarship, and wouldn't be able to attend otherwise.
           li You're able to pay for your travel and accommodations.
-
   hr
 
   include includes/code-of-conduct.pug

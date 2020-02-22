@@ -13,12 +13,12 @@
 - var companyName = "NSCoderTO and Swift TO Inc., a non-profit corporation"
 
 // Expectations
-- var expectation1 = {title: "Great Talks", description: "A day filled with talks about all things Swift programming. Beyond just iOS and Mac development, this conference is about celebrating the language and its many uses."};
-- var expectation2 = {title: "Networking", description: "Meet other passionate developers programming with Swift in your community. An after-conference event will be organized to celebrate and network."};
+- var expectation1 = {title: "Great Talks", description: "Two days filled with talks about all things Swift programming. Beyond just iOS and Mac development, this conference is about celebrating the language and its many uses."};
+- var expectation2 = {title: "Networking", description: "Meet other passionate developers in your community. A conference party will be organized to celebrate and network."};
 - var expectation3 = {title: "Knowledge you can share", description: "All content at Swift TO will be recorded and distributed online so anything you learn can easily be shared with your broader team after the event."};
-- var expectation4 = {title: "Quality", description: "We're here to celebrate the great passion and talent for Swift development in this city. SwiftTO wants to showcase great work and ideas from in and around our community."};
-- var expectation5 = {title: "Convenience", description: "Travelling for conferences may not fit all schedules. SwiftTO is a jam-packed day of content close to home."};
-- var expectation6 = {title: "Affordability", description: "Conference ticket prices don't always fit our budgets. SwiftTO is a price-conscious conference and is welcome to all experience levels."};
+- var expectation4 = {title: "Quality", description: "We're here to celebrate the great passion and talent for Swift development in this city. Swift TO wants to showcase great work and ideas from in and around our community."};
+- var expectation5 = {title: "Convenience", description: "Travelling for conferences may not fit all schedules. Swift TO is two jam-packed day of content close to home."};
+- var expectation6 = {title: "Affordability", description: "Conference ticket prices don't always fit our budgets. Swift TO aims to charge no more than necessary to run a great conference for its attendees and reports financials transparently."};
 - var expectations = [expectation1, expectation2, expectation3, expectation4, expectation5, expectation6];
 
 // Speakers
@@ -43,10 +43,11 @@ html(lang="en")
     meta(name="twitter:site", content="@" + twitter1)
     meta(name="twitter:title", content=title)
     meta(name="twitter:description", content=description)
-    meta(name='twitter:image', content='https://swiftconf.to/images/SwiftTO-Logo.png')
+    meta(name='twitter:image', content='https://swiftconf.to/images/swift-to-logo.png')
+
     //Open Graph
     meta(property="og:title", content=title)
-    meta(property="og:image", content="https://swiftconf.to/images/SwiftTO-Logo.png")
+    meta(property="og:image", content="https://swiftconf.to/images/swift-to-logo.png")
     meta(property="og:description", content=description)
     meta(property="og:url", content="https://swiftconf.to")
 
@@ -91,6 +92,8 @@ html(lang="en")
                 a(href='/#tickets') Tickets
               li
                 a(href='/speakers.html') Speakers
+              li
+                a(href='/sponsorship.html') Sponsorship
               li
                 a(href='/diversity-and-inclusion.html') Diversity &amp; Inclusion
               li

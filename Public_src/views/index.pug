@@ -7,9 +7,9 @@ block content
         div.row.align-items-center.site-hero-inner.justify-content-center
           div.col-md-8.text-center
             div.mb-1.mb-md-5
-              h1.mb-3
-                img.swift-logo(src="./images/swift-icon-white.png")
-                span=title
+              h1
+                img.swift-logo(src="./images/swift-to-logo.png")
+                span.title=title
               div.header-info
                 span.mb-4.conference-description=description
                 span.mb-3.conference-date=date
@@ -58,7 +58,7 @@ block content
         li General Admission - $295 CAD
         li Individual Sponsor - $500 CAD
       p 
-        em Individual Sponsor ticket buyers will receive a distinctive lanyard plus access to the upper balcony seating area. You will also be contacted to provide your name, photo and a url for our website
+        em Individual Sponsor ticket buyers will receive a distinctive lanyard plus access to the upper balcony seating area. You will also be contacted to provide your name, photo and a url for this website
   hr
 
   section.mb-5#talk-proposals
@@ -79,18 +79,19 @@ block content
       h3.text.mt-5.mb-5 Location
       div.row
         div.col-md-3.mb-2.map-container
-          a(target="_blank", href="https://goo.gl/maps/bh8mqeiRb6KhA2H87")
-            img.map(src="/images/map.jpg")
+          a(target="_blank", href=venueUrl)
+            img.map(src="/images/TIFF-Bell-Lightbox_2018_TIFF-Bell-Lightbox-Cinema-1---front_-credit-Sam-Santos.jpg")
         div.col-md-9
-          p Swift TO will be held at TELUS Harbour, in the heart of downtown near Union Station
-          p We will be in
-            strong &nbsp;Flex Space 003-031
-          p Go in through the main doors on Bremner, take the elevator to the 3rd floor and walk down the hall left of reception
+          p 
+            strong Swift TO 2020 will be held at TIFF Bell Lightbox
+          p Host of the world renowned Toronto International Film Festival, this venue is first-class in its support capabilities for our conference and offers an unparalleled seating experience
   hr
 
-  //- section.mb-5#sponsors
-  //-   div.container
-  //-     h4.text.mt-5.mb-5 Silver Sponsors
+  section.mb-5#sponsors
+    div.container
+      h3.text.mt-5.mb-4 Sponsorship
+      p Interested in sponsorship?&nbsp;
+      a(href="/sponsorship.html", target="blank") Learn more here
   //-     div.col-lg-12.mb-5.silver
   //-       a(href="https://www.telus.com", target="blank")
   //-         img.sponsor(src="./images/Logo_TELUS.svg")
@@ -106,8 +107,7 @@ block content
   //-         img.sponsor(src="./images/logo-bitrise.svg")
   //-       a(href="https://www.marketcircle.com", target="blank")
   //-         img.sponsor(src="./images/logo-marketcircle.svg")
-
-  hr
+  //- hr
 
   section.mb-5#organizers
     div.container

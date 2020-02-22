@@ -50,14 +50,15 @@ header {
 		.nav-link {
 			padding: 1.7rem 1rem;
 			outline: none!important;
+			color: $orange!important;
 			@include media-breakpoint-down(md) {
 				padding: .5rem .5rem;
 			}
 			&:hover {
-				color: $white!important;
+				color: $orange-hover!important;
 			}
 			&.active {
-				color: $white!important;
+				color: $orange-hover!important;
 			}
 		}
 
@@ -133,13 +134,13 @@ header {
 //
   
 .site-hero {
-	background-image: url(../images/cover-image.jpg);
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
-	> .background-color-overlay {
-		background-color: rgba(0, 0, 0, 0.75);
-	}
+	// background-image: url(../images/cover-image.jpg);
+	// background-size: cover;
+	// background-position: center center;
+	// background-repeat: no-repeat;
+	// > .background-color-overlay {
+	// 	background-color: rgba(0, 0, 0, 0.75);
+	// }
 	.container {
 		position: relative;
 		z-index: 2;
@@ -154,41 +155,48 @@ header {
 			top: 0; left: 0; right: 0; bottom: 0;
 		}
 		h1 {
-			color: $white;
+			color: $orange;
 			font-size: 3.0rem;
+			margin: 0;
+			span.title {
+				display: block;
+				width: 0;
+				height: 0;
+				visibility: hidden;
+			}
 		}
 		img.swift-logo {
-			height: 40px;
-			width: 40px;
-			vertical-align: baseline;
-			margin-right: 10px;
+			display: block;
+			width: 208px;
+			height: 164px;
+			margin: auto;
 		}
 	}
 	.site-hero-inner {
-		height: 500px;
+		padding-top: 60px;
 	}
-	&.small {
-		.site-hero-inner {
-			height: 300px;
-		}
-		div.header-info {
-			span, a {
-				font-size: 1rem;
-				&.conference-date {
-					font-size: 1.5rem;
-				}
-				&.conference-venue {
-					font-size: 1.2rem;
-				}
-			}
-		}
-	}
+	// &.small {
+	// 	.site-hero-inner {
+	// 		height: 300px;
+	// 	}
+	// 	div.header-info {
+	// 		span, a {
+	// 			font-size: 1rem;
+	// 			&.conference-date {
+	// 				font-size: 1.5rem;
+	// 			}
+	// 			&.conference-venue {
+	// 				font-size: 1.2rem;
+	// 			}
+	// 		}
+	// 	}
+	// }
 }
 
 div.header-info {
 	span, a {
 		display: block;
-		color: $white;
+		color: $orange;
 		font-size: 1.5rem;
 		line-height: 100%;
 		&.conference-description {
@@ -224,7 +232,7 @@ h3.conference-sign-up {
 }
 
 #mc-embedded-subscribe {
-	background-color: #E6022F !important;
+	background-color: $orange !important;
 	font-size: 1.1rem !important;
 	height: 40px !important;
 	color: white;
@@ -237,7 +245,7 @@ h3.conference-sign-up {
 		width: 160px;
 		height: 160px;
 		border-radius: 80px;
-		border: 4px solid #E6022F;
+		border: 4px solid $orange;
 	}
 	.details {
 		text-align: left;
