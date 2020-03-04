@@ -252,9 +252,12 @@ h3.conference-sign-up {
 	}
 }
 
-#eventbrite-iframe {
-	height: 620px;
+#eventbrite-iframe iframe {
+	height: 700px;
 	margin: auto;
+	@include media-breakpoint-down(xs) {
+		height: 920px;
+	}
 }
 
 input#show-buy-modal {
