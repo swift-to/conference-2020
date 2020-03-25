@@ -48,24 +48,15 @@ block content
       include mailchimpForm.pug
   hr
 
-  //- section.mb-5#tickets
-  //-   div.container
-  //-     h3.text.mt-5.mb-4 Tickets will go on sale in March
-  //-     p Prices include all taxes and fees
-  //-     ul 
-  //-       li Super Early Bird - $150 CAD (limited supply)
-  //-       li Early Bird - $205 CAD (limited supply)
-  //-       li General Admission - $295 CAD
-  //-       li Individual Sponsor - $500 CAD
-  //-     p 
-  //-       em Individual Sponsor ticket buyers will receive a distinctive lanyard plus access to the upper balcony seating area. You will also be contacted to provide your name, photo and a url for this website
-  //- hr
-
   section.mb-5#tickets
     div.container
       h3.text.mt-5.mb-4 Tickets
     div.container#eventbrite-iframe
       iframe(allowtransparency='true', frameborder='0', height='900',hspace='0',marginheight='5',marginwidth='5',scrolling='auto',src='//eventbrite.com/tickets-external?eid=97432028821&amp;ref=etckt',vspace='0',width='100%',kwframeid='1')
+
+  hr
+
+  include includes/refunds-and-contingency.pug
 
   hr
 
