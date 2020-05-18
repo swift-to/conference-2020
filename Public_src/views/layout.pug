@@ -1,8 +1,8 @@
 - var title = "Swift TO";
-- var description = "A conference celebrating Swift in Downtown Toronto";
-- var date = "August 13th & 14th, 2020"
-- var venueName = "TIFF Bell Lightbox"
-- var venueUrl = "https://goo.gl/maps/6rHKZ818a7VoExEc8"
+- var description = "Swift TO Presents a workshop with Paul Hudson in Downtown Toronto";
+- var date = "August 13th 2020, 9:30-4:30pm EST"
+- var venueName = "Remote & (Tentatively) In-Person"
+- var venueUrl = ""
 - var rfpUrl = "https://www.papercall.io/swift-to-2020" 
 
 - var keywords = ["conference", "swift", "ios", "macos", "watchos", "linux", "server-side", "apple"].join(",")
@@ -12,18 +12,13 @@
 - var email = "hello@swiftconf.to"
 - var companyName = "NSCoderTO and Swift TO Inc., a non-profit corporation"
 
-// Expectations
-- var expectation1 = {title: "Great Talks", description: "Two days filled with talks about all things Swift programming. Beyond just iOS and Mac development, this conference is about celebrating the language and its many uses."};
-- var expectation2 = {title: "Networking", description: "Meet other passionate developers in your community. A conference party will be organized to celebrate and network."};
-- var expectation3 = {title: "Knowledge you can share", description: "All content at Swift TO will be recorded and distributed online so anything you learn can easily be shared with your broader team after the event."};
-- var expectation4 = {title: "Quality", description: "We're here to celebrate the great passion and talent for Swift development in this city. Swift TO wants to showcase great work and ideas from in and around our community."};
-- var expectation5 = {title: "Convenience", description: "Travelling for conferences may not fit all schedules. Swift TO is two jam-packed day of content close to home."};
-- var expectation6 = {title: "Affordability", description: "Conference ticket prices don't always fit our budgets. Swift TO aims to charge no more than necessary to run a great conference for its attendees and reports financials transparently."};
-- var expectations = [expectation1, expectation2, expectation3, expectation4, expectation5, expectation6];
+- var expectation1 = {title: "Learn from Paul&nbsp;Hudson", description: "An all day workshop featuring Paul Hudson from <a href='https://www.hackingwithswift.com' target='_blank'>HackingWithSwift.com</a>"};
+- var expectation2 = {title: "Live in EST", description: "Featuring highlights from <a href='https://www.hackingwithswift.com/live' target='_blank'>Hacking With Swift Live</a>, this workshop will be held in the EST Timezone."};
+- var expectation3 = {title: "Remote and in-person options", description: "This event will be run remotely as well as a small in-person workshop in Downtown Toronto (circumstances permitting)"};
+- var expectations = [expectation1, expectation2, expectation3];
 
-// Speakers
-//- - var speaker1 = {name: "Paul Hudson", slug: "paul-hudson", twitter: "twostraws"};
-- var speakers = [];
+- var speaker1 = {name: "Paul Hudson", slug: "paul-hudson", twitter: "twostraws"};
+- var speakers = [speaker1];
 
 doctype html
 html(lang="en")
@@ -66,12 +61,6 @@ html(lang="en")
             ul.navbar-nav.ml-auto.pl-lg-5.pl-0
               li.nav-item
                 a.nav-link(href='/#tickets') Tickets
-              li.nav-item
-                a.nav-link(href='/speakers.html') Speakers 
-              li.nav-item
-                a.nav-link(href='/#schedule') Schedule 
-              li.nav-item
-                a.nav-link(href='/diversity-and-inclusion.html') Diversity &amp; Inclusion
 
     div#app
       block content
@@ -91,15 +80,9 @@ html(lang="en")
               li
                 a(href='/#tickets') Tickets
               li
-                a(href='/speakers.html') Speakers
-              li
                 a(href='/sponsorship.html') Sponsorship
               li
-                a(href='/diversity-and-inclusion.html') Diversity &amp; Inclusion
-              li
                 a(href='https://2019.swiftconf.to') 2019 Website
-              li
-                a(target='_blank', href=rfpUrl) Submit a talk proposal
           .col-md-4.mb-2
             h3.mb-4 Contact
             p

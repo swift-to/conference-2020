@@ -166,31 +166,22 @@ header {
 			}
 		}
 		img.swift-logo {
-			display: block;
+			display: inline-block;
 			width: 208px;
 			height: 164px;
 			margin: auto;
+		}
+		img.speaker {
+			display: inline-block;
+			width: 120px;
+			height: 120px;
+			border-radius: 60px;
+			border: 4px solid $orange;
 		}
 	}
 	.site-hero-inner {
 		padding-top: 60px;
 	}
-	// &.small {
-	// 	.site-hero-inner {
-	// 		height: 300px;
-	// 	}
-	// 	div.header-info {
-	// 		span, a {
-	// 			font-size: 1rem;
-	// 			&.conference-date {
-	// 				font-size: 1.5rem;
-	// 			}
-	// 			&.conference-venue {
-	// 				font-size: 1.2rem;
-	// 			}
-	// 		}
-	// 	}
-	// }
 }
 
 div.header-info {
@@ -253,10 +244,10 @@ h3.conference-sign-up {
 }
 
 #eventbrite-iframe iframe {
-	height: 700px;
+	height: 500px;
 	margin: auto;
 	@include media-breakpoint-down(xs) {
-		height: 920px;
+		height: 720px;
 	}
 }
 

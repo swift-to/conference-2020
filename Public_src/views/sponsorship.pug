@@ -9,13 +9,22 @@ block content
             div.mb-1.mb-md-5
               h1
                 img.swift-logo(src="./images/swift-to-logo.png")
+                span.big-ampersand &amp;&nbsp;
+                img.speaker(src="/images/paul-hudson.jpg")
                 span.title=title
               div.header-info
                 span.mb-4.conference-description=description
                 span.mb-3.conference-date=date
-                a.mb-4.conference-venue(href=venueUrl, target="_blank") @ #{venueName}
+                a.mb-4.conference-venue(href=venueUrl, target="_blank") #{venueName}
 
   section.mb-5#sponsorship
     div.container
       h3.text.mt-5.mb-5 Sponsorship
-      a(href="images/Swift-TO-Sponsorship.pdf") View our sponsorship information
+      p Please reach out to us at hello@swiftconf.to to discuss sponsorship opportunities for this year's workshop.
+      p Ways you can help sponsor:
+      ul
+        li Venue Sponsor
+        li Breakfast Sponsor
+        li Lunch Sponsor
+        li A/V and Streaming Sponsor
+      p We are currently seeking a Venue Sponsor for the in-person workshop.
