@@ -244,10 +244,10 @@ h3.conference-sign-up {
 }
 
 #eventbrite-iframe iframe {
-	height: 500px;
+	height: 650px;
 	margin: auto;
 	@include media-breakpoint-down(xs) {
-		height: 720px;
+		height: 870px;
 	}
 }
 
